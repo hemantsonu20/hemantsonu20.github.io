@@ -9,6 +9,7 @@
     crossorigin="anonymous">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <title>Portfolio</title>
 </head>
@@ -109,7 +110,7 @@
 
         <div class="card-body">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6" data-aos="fade-right" data-aos-offset="200">
               <h4>Java</h4>
               <div class="progress mb-3 bg-light-grey">
                 <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width: 20%;"></div>
@@ -166,7 +167,7 @@
               </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-6" data-aos="fade-left" data-aos-offset="200">
               <h4>Angular</h4>
               <div class="progress mb-3 bg-light-grey">
                 <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width: 20%;"></div>
@@ -211,11 +212,11 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6" data-aos="fade-right">
               <h4>Other Tools</h4>
               <p class="mb-3">Git, Github, Maven, Apache Kafka, TestNG, JMockit, Mockito, JMeter</p>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" data-aos="fade-left">
               <h4>Cloud</h4>
               <p class="mb-3">Google Cloud, Google App Engine, Firebase, Cloud Foundry</p>
             </div>
@@ -238,7 +239,7 @@
         </div>
         <div class="card-deck mb-3">
 
-          <div class="card card-zoom">
+          <div class="card card-zoom" data-aos="zoom-in">
             <div class="card-header bg-success text-white">
               <h4 class="card-title">Yatra</h4>
               <p class="card-text">Gurgaon, Haryana, India</p>
@@ -251,7 +252,7 @@
             </div>
           </div>
 
-          <div class="card card-zoom">
+          <div class="card card-zoom" data-aos="zoom-in">
             <div class="card-header bg-success text-white">
               <h4 class="card-title">GlobalLogic</h4>
               <p class="card-text">Noida, Uttar Pradesh, India</p>
@@ -264,7 +265,7 @@
             </div>
           </div>
 
-          <div class="card card-zoom">
+          <div class="card card-zoom" data-aos="zoom-in">
             <div class="card-header bg-success text-white">
               <h4 class="card-title">Aricent</h4>
               <p class="card-text">Gurgaon, Haryana, India</p>
@@ -294,7 +295,7 @@
         </div>
 
         <div class="card-deck mb-5">
-          <div class="card card-zoom">
+          <div class="card card-zoom" data-aos="flip-left" data-aos-offset="200" data-aos-easing="ease-out-cubic">
             <div class="card-header bg-primary text-white">
               <h4 class="card-title">API Gateway</h4>
               <p class="card-text">Micro Services Architecture</p>
@@ -317,7 +318,7 @@
             </div>
           </div>
 
-          <div class="card card-zoom">
+          <div class="card card-zoom" data-aos="flip-left" data-aos-offset="200" data-aos-easing="ease-out-cubic">
             <div class="card-header bg-primary text-white">
               <h4 class="card-title">JWT Cracker</h4>
               <p class="card-text">Multi-threaded JWT Cracker</p>
@@ -340,7 +341,7 @@
             </div>
           </div>
 
-          <div class="card card-zoom">
+          <div class="card card-zoom" data-aos="flip-left" data-aos-offset="200" data-aos-easing="ease-out-cubic">
             <div class="card-header bg-primary text-white">
               <h4 class="card-title">SIP Uri Parser</h4>
               <p class="card-text">Uri Parser using Antlr</p>
@@ -365,7 +366,7 @@
 
         </div>
         <div class="card-deck mb-3">
-          <div class="card card-zoom">
+          <div class="card card-zoom" data-aos="flip-right" data-aos-offset="200" data-aos-easing="ease-out-cubic">
             <div class="card-header bg-primary text-white">
               <h4 class="card-title">Cric Score Updater</h4>
               <p class="card-text">Desktop Cricket Score App</p>
@@ -385,7 +386,7 @@
             </div>
           </div>
 
-          <div class="card card-zoom">
+          <div class="card card-zoom" data-aos="flip-right" data-aos-offset="200" data-aos-easing="ease-out-cubic">
             <div class="card-header bg-primary text-white">
               <h4 class="card-title">Cric Poll</h4>
               <p class="card-text">Desktop Cricket Score App</p>
@@ -406,7 +407,7 @@
             </div>
           </div>
 
-          <div class="card card-zoom">
+          <div class="card card-zoom" data-aos="flip-right" data-aos-offset="200" data-aos-easing="ease-out-cubic">
             <div class="card-header bg-primary text-white">
               <h4 class="card-title">Json Viewer</h4>
               <p class="card-text">A desktop java application</p>
@@ -443,7 +444,7 @@
           <h2>Get In Touch</h2>
           <!-- <p class="lead">Feel free to contact me anytime</p> -->
         </div>
-        <div class="card-body">
+        <div class="card-body" data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-out-cubic">
           <form id="contact-form" onsubmit="sendMessage()">
             <div class="form-group">
               <div class="input-group input-group-lg">
@@ -505,8 +506,15 @@
       crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
+
+      AOS.init({
+        duration: 1200,
+        //easing: 'ease-in-out'
+      });
+
       $("#year").text(new Date().getFullYear());
 
       $(".port-item").on('click', function (event) {

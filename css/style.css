@@ -34,12 +34,9 @@
   background-color: white;
 }
 
-.card-zoom {
-  transition: all .3s ease-in-out;
-}
-
 .card-zoom:hover {
-  transform: scale(1.1, 1.1);
+  opacity: 0.6 !important;
+  transition-duration: 200ms !important;
 }
 
 @media(min-width: 1199px) {
