@@ -39,7 +39,7 @@
   transition-duration: 200ms !important;
 }
 
-@media(min-width: 1199px) {
+@media(min-width: 1200px) {
   .port-item {
     padding-bottom: 3em !important;
   }
