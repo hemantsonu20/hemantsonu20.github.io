@@ -429,7 +429,6 @@
         </div>
       </div>
     </div>
-    </div>
 
 
     <!-- CONTACT -->
@@ -481,9 +480,7 @@
 
             <input id="contact-submit" type="submit" value="Submit" class="btn bg-dark-magenta btn-lg btn-block text-white">
             <small class="form-text text-muted">It will open gmail compose box with prefilled data</small>
-
           </form>
-
         </div>
 
       </div>
@@ -500,43 +497,43 @@
         </div>
       </div>
     </footer>
-  </div>
+    </div>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
 
-  <script>
-    $("#year").text(new Date().getFullYear());
+    <script>
+      $("#year").text(new Date().getFullYear());
 
-    $(".port-item").on('click', function (event) {
-      const target = $(this).data('target');
-      if (target !== "") {
-        event.preventDefault();
+      $(".port-item").on('click', function (event) {
+        const target = $(this).data('target');
+        if (target !== "") {
+          event.preventDefault();
 
-        $('html, body').animate({
-          scrollTop: $(target).offset().top
-        }, 800, function () {
+          $('html, body').animate({
+            scrollTop: $(target).offset().top
+          }, 800, function () {
 
-          window.location.hash = target;
-        });
+            window.location.hash = target;
+          });
+        }
+      });
+
+      function sendMessage() {
+
+        const name = document.getElementById('name-input').value;
+        const message = document.getElementById('message-input').value;
+        const subject = 'Message from ' + name + ' via ' + encodeURI(window.location.host);
+
+        document.getElementById("contact-form").reset();
+
+        window.open('https://mail.google.com/mail/?view=cm&fs=1&to=hemantsonu20@gmail.com&su=' + subject + '&body=' + message, '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
+
       }
-    });
-
-    function sendMessage() {
-
-      const name = document.getElementById('name-input').value;
-      const message = document.getElementById('message-input').value;
-      const subject = 'Message from ' + name + ' via ' + encodeURI(window.location.host);
-
-      document.getElementById("contact-form").reset();
-
-      window.open('https://mail.google.com/mail/?view=cm&fs=1&to=hemantsonu20@gmail.com&su=' + subject + '&body=' + message, '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
-
-    }
 
     // Smooth Scrolling
     /*  $(function () {
@@ -550,7 +547,7 @@
         });
       }); */
 
-  </script>
+    </script>
 
 </body>
 
