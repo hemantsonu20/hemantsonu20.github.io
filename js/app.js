@@ -25,6 +25,22 @@ $('.port-item').on('click', function(event) {
   }
 });
 
+function isMobile() {
+  if (
+    navigator.userAgent.match(/Android/i) ||
+    navigator.userAgent.match(/webOS/i) ||
+    navigator.userAgent.match(/iPhone/i) ||
+    navigator.userAgent.match(/iPad/i) ||
+    navigator.userAgent.match(/iPod/i) ||
+    navigator.userAgent.match(/BlackBerry/i) ||
+    navigator.userAgent.match(/Windows Phone/i)
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 // open gmail compose box to send message
 function sendMessage() {
   const name = document.getElementById('name-input').value;
@@ -32,15 +48,17 @@ function sendMessage() {
   const subject = 'Message from ' + name + ' via ' + encodeURI(window.location.host);
 
   document.getElementById('contact-form').reset();
-
-  window.open(
-    'https://mail.google.com/mail/?view=cm&fs=1&to=hemantsonu20@gmail.com&su=' +
+  var url;
+  if (isMobile()) {
+    url = 'mailto:hemantsonu20@gmail.com?subject=' + subject + '&body=' + message;
+  } else {
+    url =
+      'https://mail.google.com/mail/?view=cm&fs=1&to=hemantsonu20@gmail.com&su=' +
       subject +
       '&body=' +
-      message,
-    '_blank',
-    'location=yes,height=570,width=520,scrollbars=yes,status=yes'
-  );
+      message;
+  }
+  window.open(url, '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
 }
 
 //  Scrolling Event Listener
