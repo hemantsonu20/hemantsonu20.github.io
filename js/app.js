@@ -62,16 +62,19 @@ function sendMessage() {
 }
 
 //  Scrolling Event Listener
-/*  $(function () {
-    $(window).scroll(function (e) {
-      $('.port-section').each(function () {
-        if ($(window).scrollTop() > $(this).offset().top) {
-          console.log(this.id + ' ' + $(window).scrollTop() + ' ' + $(this).offset().top);
-          window.location.hash = this.id;
+/*$(function() {
+  $(window).scroll(function(e) {
+    $('.port-section').each(function() {
+      var diff = $(window).scrollTop() - $(this).offset().top;
+      console.log(this.id + ' ' + $(window).scrollTop() + ' ' + $(this).offset().top);
+      if (diff > 0 && diff < 50) {
+        if (history.pushState) {
+          history.replaceState(null, null, '#' + this.id);
         }
-      });
+      }
     });
-  }); */
+  });
+});*/
 
 /* RESPONSIVE HANDLING */
 function changeMinWidthLg(m) {
