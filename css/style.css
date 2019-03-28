@@ -25,7 +25,7 @@
   cursor: pointer;
 }
 
-#github-social-href:hover, #contact-submit:hover {
+.hover:hover {
   opacity: 0.8;
 }
 
